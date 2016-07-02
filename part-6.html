@@ -1,0 +1,38 @@
+<!-- AngularJS ng repeat directive -->
+<! doctype html >
+<html ng-app='angularLearning'>
+    <head>
+        <script src="js/angular-1.5.7/angular.js"></script>
+        <script src="js/part-6.js"></script>
+    </head>
+    <body>
+        <div ng-controller="part6Controller">
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                    </tr>
+                    <tbody>
+                        <tr ng-repeat='employee in employees'>
+                            <td>{{employee.firstName}}</td>
+                            <td>{{employee.lastName}}</td>
+                            <td>{{employee.gender}}</td>
+                        </tr>
+                    </tbody>
+                </thead>
+            </table>
+        <ul>
+            <li ng-repeat='country in countries'>
+                {{country.name}}
+                <ul>
+                    <li ng-repeat='city in country.cities'>
+                        {{city.name}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+    </body>
+</html>

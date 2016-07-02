@@ -1,0 +1,47 @@
+<!-- angularJs two way data binding -->
+<!doctype html>
+<html ng-app="angularLearning">
+    <head>
+        <title>Angular js demo Part 5</title>
+        <script src="js/angular-1.5.7/angular.js"></script>
+        <script src="js/part-5.js"></script>
+    </head>
+    <body>
+        <div ng-controller="part5Controller">
+            <div style="display: none;">
+                <input type='text' ng-model="message"/>
+                {{message}}
+            </div>
+            <table>
+                <tr>
+                    <td>Employee First Name</td>
+                    <td><input type="text" ng-model="employee.firstName"/></td>
+                </tr>
+                <tr>
+                    <td>Employee LastName:</td>
+                    <td><input type="text" ng-model="employee.lastName"/></td>
+                </tr>
+                <tr>
+                    <td>Employee Gender:</td>
+                    <td><input type="text" ng-model="employee.gender"/></td>
+                </tr>
+            </table>
+            
+            <table>
+                <tr>
+                    <td>Employee FirstName;</td>
+                    <td>{{employee.firstName}}</td>
+                </tr>
+                <tr>
+                    <td>Employee.lastName</td>
+                    <td>{{employee.lastName}}</td>
+                </tr>
+                <tr>
+                    <td>Employee Gender:</td>
+                    <td>{{employee.gender}}</td>
+                </tr>
+            </table>
+        </div>
+        
+    </body>
+</html>

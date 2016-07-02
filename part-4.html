@@ -1,0 +1,24 @@
+<!-- angularJs ng src directive -->
+<!doctype html>
+<html ng-app="angularLearning">
+    <head>
+        <title>Angular js demo Part 4</title>
+        <script src="js/angular-1.5.7/angular.js"></script>
+        <script src="js/part-4.js"></script>
+    </head>
+    <body>
+        <div ng-controller="part4Controller">
+            <div>
+                <em>Baby First Name: </em><strong>{{baby.firstName}}</strong>
+            </div>
+            <div>
+                <em>Baby Last Name: </em><strong>{{baby.lastName}}</strong>
+            </div>
+            <div>
+                <em>Baby Age: </em><strong>{{baby.age}}</strong><br/>
+                <img ng-src="{{baby.image}}" alt="{{baby.firstName}}" width=100/>
+            </div>
+        </div>
+        
+    </body>
+</html>
