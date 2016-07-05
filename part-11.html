@@ -1,0 +1,49 @@
+<!-- Search Filters -->
+<!doctype html>
+<html ng-app="angularLearning">
+    <head>
+        <title>Search Filters</title>
+        <script src="js/angular-1.5.7/angular.js"></script>
+        <script src="js/part-11.js"></script>
+    </head>
+    <style>
+        input {
+            display: block;
+            width: 50%;
+        }
+    </style>
+    <body>
+        <div ng-controller="part11Controller">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                            <input type="text" placeholder="Name" ng-model="searchText.name"/>
+                        </th>
+                        <th>
+                            Date of Birth
+                            <input type="text" placeholder="Date of Birth" ng-model="searchText.dateOfBirth"/>
+                        </th>
+                        <th>
+                            Gemder
+                            <input type="text" placeholder="Gender" ng-model="searchText.gender"/>
+                        </th>
+                        <th>
+                            Salary
+                            <input type="text" placeholder="salary" ng-model="searchText.salary"/>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees| filter: searchText">
+                        <td> {{ employee.name|uppercase }}</td>
+                        <td>{{ employee.dateOfBirth|date: "dd/MM/yyyy" }}</td>
+                        <td>{{ employee.gender |lowercase }}</td>
+                        <td>{{ employee.salary| currency}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
