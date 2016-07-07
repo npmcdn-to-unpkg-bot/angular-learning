@@ -1,0 +1,29 @@
+<!-- create a custom filter -->
+<!doctype html>
+<html ng-app="angularLearning">
+    <head>
+        <title>Create a custom filter in angularjs</title>
+        <script src="js/angular-1.5.7/angular.js"></script>
+        <script src="js/part-13.js"></script>
+    </head>
+    <body ng-controller="part13Controller">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>age</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td> {{ employee.name }}</td>
+                    <td>{{ employee.gender | gender }}</td>
+                    <td>{{ employee.age }}</td>
+                    <td>{{ employee.salary }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

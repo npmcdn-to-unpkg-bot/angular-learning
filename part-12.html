@@ -1,0 +1,56 @@
+<!-- search filter by multiple properties -->
+<!doctype html >
+<html ng-app="angularLearning">
+    <head>
+        <title>Search filter by multiple properties</title>
+        <script src="js/angular-1.5.7/angular.js"></script>
+        <script src="js/part-12.js"></script>
+    </head>
+    <body>
+        <div ng-controller="part12Controller">
+            <input type="text" placeholder="Search name and country" ng-model="searchText"/>
+            <br/><br/>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Salary</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees | filter:search">
+                        <td>{{ employee.name | uppercase}}</td>
+                        <td>{{employee.gender |lowercase}}</td>
+                        <td>{{employee.salary|currency}}</td>
+                        <td>{{employee.country}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <input type="text" placeholder= 'Search Name' ng-model="searchText2.name"/>
+            <input type='text' placeholder='search country' ng-model="searchText2.country" />
+            Exact match: <input type="checkbox" ng-model="exactMatch"/>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Salary</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees | filter:searchText2:exactMatch">
+                        <td>{{ employee.name}}</td>
+                        <td>{{ employee.gender | lowercase}}</td>
+                        <td>{{ employee.salary | currency}}</td>
+                        <td>{{ employee.country}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </body>
+</html>
