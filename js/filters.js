@@ -1,5 +1,5 @@
 'use strict';
-angular.module('angularJsApplication.filters',[])
+angular.module('angularLearning.filters',[])
     .filter('gender', function(){
         return function(gender){
             

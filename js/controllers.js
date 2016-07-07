@@ -1,5 +1,5 @@
 'use strict';
-angular.module('angularJsApplication.controllers',[])
+angular.module('angularLearning.controllers',[])
     .controller('part13Controller', function($scope){
         var employees = [
             {name: 'asdf', gender: 1, age: 20, salary: 10000},
