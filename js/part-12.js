@@ -15,7 +15,7 @@ var angularJsApplication = angular
                                     if($scope.searchText == undefined){
                                         return true;
                                     }else{
-                                        if (item.name.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1 ||                                     item.country.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1){
+                                        if (item.name.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1 ||                                     item.countrypa.toLowerCase().indexOf($scope.searchText.toLowerCase()) != -1){
                                             return true;
                                         }
                                     }

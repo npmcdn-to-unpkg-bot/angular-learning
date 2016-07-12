@@ -1,0 +1,33 @@
+<!-- ng init -->
+<!doctype html>
+<html ng-app="angularLearning">
+    <head>
+        <title>Ng Init demo</title>
+        <script src="js/angular-1.5.7/angular.js"></script>
+        <script src="js/part-15.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+    </head>
+    <body ng-controller="part13Controller">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees" ng-init="id = 0;">
+                    <td>{{ id + 1}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.age}}</td>
+                    <td>{{employee.gender | gender}}</td>
+                    <td>{{employoee.salary}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

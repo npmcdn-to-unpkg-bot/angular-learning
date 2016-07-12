@@ -1,0 +1,34 @@
+<!-- ng-hide and ng-show -->
+<!doctype html>
+<html ng-app="angularLearning">
+    <head>
+        <title>Ng hide and ng show</title>
+        <script src="js/angular-1.5.7/angular.js"></script>
+        <script src="js/part-14.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+    </head>
+    <body ng-controller="part13Controller">
+        <input type="checkbox" ng-model='hideSalary'/> Hide salary
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>age</th>
+                    <th>gender</th>
+                    <th ng-hide="hideSalary">Salary</th>
+                    <th ng-show="hideSalary">Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td> {{ employee.name }}</td>
+                    <td>{{ employee.age }}</td>
+                    <td>{{ employee.gender |gender}}</td>
+                    <td ng-hide="hideSalary">{{ employee.salary }}</td>
+                    <td ng-show="hideSalary">####</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

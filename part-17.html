@@ -1,0 +1,40 @@
+<!-- $httpservice -->
+<!doctype html>
+<html ng-app="angularLearning">
+    <head>
+        <title>$http demo</title>
+        <script src="js/angular-1.5.7/angular.js"></script>
+        <script src="js/part-17.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/services.js"></script>
+    </head>
+    <body ng-controller="part13Controller">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Date of Birth</th>
+                    <th>Salary</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td>{{ employee.id}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.age}}</td>
+                    <td>{{employee.date_of_birth | date: "dd/MM/yyyy"}}</td>
+                    <td>{{employee.salary}}</td>
+                    <td>{{employee.address}}</td>
+                    <td>{{employee.city}}</td>
+                    <td>{{employee.country}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
